@@ -73,6 +73,7 @@ function dragula (initialContainers, options) {
     var op = remove ? 'remove' : 'add';
     var delay = (!isNaN(o.delay)) ? o.delay : null;
 
+    console.log(delay);
     if (delay) {
       setTimeout(function () {
         touchy(documentElement, op, 'mousemove', startBecauseMouseMoved);
