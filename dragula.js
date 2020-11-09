@@ -1,5 +1,7 @@
 'use strict';
 
+// Berners magic test comment
+
 var emitter = require('contra/emitter');
 var crossvent = require('crossvent');
 var classes = require('./classes');
