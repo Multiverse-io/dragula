@@ -1,12 +1,10 @@
 'use strict';
 
-// Berners magic test comment
-
 var emitter = require('contra/emitter');
 var crossvent = require('crossvent');
 var classes = require('./classes');
 var doc = document;
-var documentElement = doc.documentElement;
+var documentElement = doc;
 
 function dragula (initialContainers, options) {
   var len = arguments.length;
