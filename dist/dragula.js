@@ -34,7 +34,7 @@ module.exports = {
 };
 
 },{}],2:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 'use strict';
 
 var emitter = require('contra/emitter');
@@ -656,7 +656,7 @@ function getCoord (coord, e) {
 
 module.exports = dragula;
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"./classes":1,"contra/emitter":5,"crossvent":6}],3:[function(require,module,exports){
 module.exports = function atoa (a, n) { return Array.prototype.slice.call(a, n); }
@@ -730,7 +730,7 @@ module.exports = function emitter (thing, options) {
 };
 
 },{"./debounce":4,"atoa":3}],6:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 'use strict';
 
 var customEvent = require('custom-event');
@@ -833,10 +833,10 @@ function find (el, type, fn) {
   }
 }
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"./eventmap":7,"custom-event":8}],7:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 'use strict';
 
 var eventmap = [];
@@ -851,10 +851,10 @@ for (eventname in global) {
 
 module.exports = eventmap;
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{}],8:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 
 var NativeCustomEvent = global.CustomEvent;
 
@@ -904,7 +904,7 @@ function CustomEvent (type, params) {
   return e;
 }
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{}],9:[function(require,module,exports){
 // shim for using process in browser
@@ -1093,7 +1093,7 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],10:[function(require,module,exports){
-(function (setImmediate){
+(function (setImmediate){(function (){
 var si = typeof setImmediate === 'function', tick;
 if (si) {
   tick = function (fn) { setImmediate(fn); };
@@ -1102,10 +1102,10 @@ if (si) {
 }
 
 module.exports = tick;
-}).call(this,require("timers").setImmediate)
+}).call(this)}).call(this,require("timers").setImmediate)
 
 },{"timers":11}],11:[function(require,module,exports){
-(function (setImmediate,clearImmediate){
+(function (setImmediate,clearImmediate){(function (){
 var nextTick = require('process/browser.js').nextTick;
 var apply = Function.prototype.apply;
 var slice = Array.prototype.slice;
@@ -1182,7 +1182,7 @@ exports.setImmediate = typeof setImmediate === "function" ? setImmediate : funct
 exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
   delete immediateIds[id];
 };
-}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
+}).call(this)}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
 
 },{"process/browser.js":9,"timers":11}]},{},[2])(2)
 });
