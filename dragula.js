@@ -381,12 +381,7 @@ function dragula (initialContainers, options) {
 
     var item = _copy || _item;
     var elementBehindCursor = getElementBehindPoint(_mirror, clientX, clientY);
-    console.log('log elementBehindCursor');
-    console.log(elementBehindCursor);
     var dropTarget = findDropTarget(elementBehindCursor, clientX, clientY);
-    // Berners is cool
-    console.log('log drop target');
-    console.log(dropTarget);
     var changed = dropTarget !== null && dropTarget !== _lastDropTarget;
     if (changed || dropTarget === null) {
       out();
@@ -570,8 +565,6 @@ function getElementBehindPoint (point, x, y) {
   var el;
   point.className += ' gu-hide';
   el = doc.elementFromPoint(x, y);
-  console.log('log el from inside getElementBehindPoint');
-  console.log(el);
   point.className = state;
   return el;
 }
